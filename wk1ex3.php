@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php
-	echo “Blimmy it worked !”;
+	echo(“Blimmy it worked!”);
 ?>
 </body>
 </html>

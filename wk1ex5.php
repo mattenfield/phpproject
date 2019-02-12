@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php
-	$myfavouritemodule = “Internet Systems Development”;
+	$myfavouritemodule = "Internet Systems Development";
 	echo $myfavouritemodule;
 ?>
 </body>

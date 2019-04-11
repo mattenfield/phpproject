@@ -3,7 +3,7 @@
     <body>
       <form action="confirmation.php"  method="post">
 	Select the colour for the <?php echo $_POST[selqty] ?> widgets you are ordering
-  <input type = "hidden" name="quantity" value="<?php echo $_POST[selqty] ?>">
+<?php setcookie(quantityValue,$_POST[selqty]); ?>
    	<select name="selcolour">
    	  <option>white</option>
 	  <option>red</option>

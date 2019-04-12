@@ -2,6 +2,9 @@
 error_reporting(0);
 $link = mysqli_connect("127.0.0.1", "root", "", "db1_21700581");
 
+session_start();
+$_SESSION['nameID'] = $_GET[id];
+
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -15,7 +18,7 @@ if (!$link) {
   ?>
 <html>
 <body>
-<form action="" method="post">
+<form action="wk6ex2save.php" method="post">
 
 	Name :
 	<input type=text name=txtname value="<?php echo $row[name] ?>" readonly />
@@ -28,5 +31,11 @@ if (!$link) {
 	</br>
 	<input type=submit name=btnsubmit value="save"/>
 </form>
+<form action="wk6ex2delete.php" method="post">
+  <a href="wk6ex2delete.php" onclick="return confirm('Are you sure you want to delete this record?');"/> Delete </a>
+</form>
+
 </body>
+
+
 <?php mysqli_close($link);?>
